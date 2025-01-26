@@ -1,7 +1,8 @@
 # Hits Radio Spotify Playlist Automation 🎵  
 - This project scrapes the latest tracks from [Hits Radio](https://onlineradiobox.com/ke/hitskenya/playlist/?cs=ke.xfmkenya), matches them on **Spotify**, using **Spotify API** and creates a playlist automatically! 
 - This project allows you to convert your favorite music station playlist into a Spotify playlist, so you never miss out.
-
+- Here is a [Spotify Playlist](https://open.spotify.com/playlist/6lUOYHk2oISj9P2bgZwzmA?si=xFFGfl_ETuuo1rPYnoRCTQ) link for a Sunday Morning (6-10AM) Hits Radio playlist created on January 26, 2025.
+  
 ## Features 
 - **Scrape Tracks**: Fetch the latest tracks played on **Hits Radio** in real time.
 - **Spotify Matching**: Automatically match scraped tracks on Spotify using the Spotify API.
@@ -43,8 +44,6 @@
   CSV file saved to reports/Recent_3H_tracks_2025-01-26_16:41:52.csv
   CSV file saved to reports/Time_range_06:00-10:00H_tracks_2025-01-26_19:14:41.csv
   ```
-  - Spotify playlist
-    Here is a [Spotify Playlist](https://open.spotify.com/playlist/6lUOYHk2oISj9P2bgZwzmA?si=xFFGfl_ETuuo1rPYnoRCTQ) link for a Sunday Morning (6-10AM) Hits Radio playlist created on January 26, 2025. 
 ## How It Works 
 1. **Scraping**:
 - The script scrapes the Hits Radio playlist page to fetch the latest tracks and their metadata (title, artist, and time played).
