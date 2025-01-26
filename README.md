@@ -12,8 +12,7 @@
 ## Installation 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/hits-radio-scraper.git
-   cd hits-radio-scraper
+   https://github.com/atlonglastkibet/Hits-Radio-Spotify-Project.git
 
 2. **Install requirements**:
    ```bash
