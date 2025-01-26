@@ -1,5 +1,5 @@
 # Hits Radio Spotify Playlist Automation 🎵  
-- This project scrapes the latest tracks from [Hits Radio](https://onlineradiobox.com/ke/hitskenya/), matches them on **Spotify**, using **Spotify API** and creates a playlist automatically! 
+- This project scrapes the latest tracks from [Hits Radio](https://onlineradiobox.com/ke/hitskenya/playlist/?cs=ke.xfmkenya), matches them on **Spotify**, using **Spotify API** and creates a playlist automatically! 
 - This project allows you to convert your favorite music station playlist into a Spotify playlist, so you never miss out.
 
 ## Features 
@@ -29,40 +29,40 @@
 ## Usage 
 1. Run the Notebook cells
 2. Options
-  --hours: Number of hours to scrape tracks from (default: 1).
+  -hours: Recent number of hours to scrape tracks from (default: 1).
   ```
   get_recent_tracks(track_list, hours=1)
   ```
-  --Time range: Number of hours to scrape from
+  -Time range: Range of time in 24 hours to scrape from
   ```bash
   start_time_x = '06:00'
   end_time_y = '10:00'
   get_tracks_in_range(track_list, start_time_x,end_time_y)
   ```
-  --output: Output file for the scraped tracks with timestamp(default: playlist.csv).
+  -output: Output file for the scraped tracks with timestamp(default: playlist.csv).
   ```bash
   CSV file saved to reports/Recent_3H_tracks_2025-01-26_16:41:52.csv
   CSV file saved to reports/Time_range_06:00-10:00H_tracks_2025-01-26_19:14:41.csv
   ```
 ## How It Works 
-1. Scraping:
+1. **Scraping**:
 - The script scrapes the Hits Radio playlist page to fetch the latest tracks and their metadata (title, artist, and time played).
 
-2. Spotify Matching:
+2. **Spotify Matching**:
 - The script uses the Spotify API to search for each track and match it with the correct song on Spotify.
   
-3. Playlist Creation:
+3. **Playlist Creation**:
 - Once the tracks are matched, the app creates a Spotify playlist with the matched songs.
 
-## Search algorithm
+## The Search algorithm
 - To match scraped tracks with songs on Spotify, this project uses a combination of **Spotify's Search API** and **fuzzy string matching**:
 
-### 1. **Spotify Search API**
+### a. **Spotify Search API**
    - This project uses the [Spotify Web API](https://developer.spotify.com/documentation/web-api/) to search for tracks and artists.
    - The API allows querying by track name, artist, and other metadata.
    - The API returns a list of matching tracks, which are then processed to find the best match.
 
-### 2. **Fuzzy String Matching**
+### b. **Fuzzy String Matching**
    - To handle variations in track and artist names (e.g., typos, abbreviations, or different formats), this project uses **fuzzy string matching** with the `thefuzz` library.
    - Fuzzy matching calculates the similarity between two strings (e.g., the scraped track name and the Spotify track name) and assigns a score.
    - Example:
@@ -73,7 +73,7 @@
    - This ensures that even if the scraped data isn't perfectly formatted, the app can still find the correct track on Spotify.
    - In this project I use a similarity score of 70.
 
-### 3. **Normalization**
+### c. **Normalization**
 - To ensure accurate matching between scraped tracks and Spotify songs, the app performs **text normalization**:
   1. **Lowercasing**: Convert text to lowercase for case-insensitive matching.
   2. **Remove Diacritics**: Strip accents (e.g., `é` → `e`).
@@ -83,19 +83,19 @@
    
 This ensures consistent formatting and improves matching accuracy.
 
-### 4. **Advanced Matching Logic**
+### d. **Advanced Matching Logic**
    - The app combines **exact matches** and **fuzzy matches** to improve accuracy:
      1. **Exact Match**: If the scraped track name and artist name match exactly with a Spotify track, it’s considered a perfect match.
      2. **Fuzzy Match**: If no exact match is found, the app uses fuzzy matching to find the closest match based on a similarity threshold (e.g., 70% or higher).
      3. **Weighted Scoring**: The app prioritizes artist name matches over track name matches to reduce false positives.
 
-### Example Workflow:
-1. Scrape a track: `"RockstaMade - Playboi Carti"`.
-2. Query Spotify: Search for `"RockstarMade:Playboi Carti"`.
+### e. **Workflow**:
+1. Scrape a track: `"RockstaMade - Playboi Carti"` from the radio station's playlist.
+2. Query Spotify: Search for `"track:RockstarMade artist:Playboi Carti"`.
 3. If no exact match is found, use fuzzy matching to find the closest match (e.g., '`"Rockstar Made: Playboi Carti"`).
-4. Add the matched track to the playlist.
+4. Add the matched track to the Spotify playlist.
 
-This combination of **Spotify's Search API** and **fuzzy string matching** ensures high accuracy in matching tracks, even when the scraped data isn't perfect.
+- Combining **Spotify's Search API** and **fuzzy string matching** improves accuracy in matching tracks, even when the scraped data isn't perfect.
 
 ### Recommendations
 - Fine tuning the search algorithm to improve accuracy.
