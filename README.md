@@ -38,11 +38,13 @@
   end_time_y = '10:00'
   get_tracks_in_range(track_list, start_time_x,end_time_y)
   ```
-  -output: Output file for the scraped tracks with timestamp(default: playlist.csv).
+  -Output: Output file for the scraped tracks with timestamp.
   ```bash
   CSV file saved to reports/Recent_3H_tracks_2025-01-26_16:41:52.csv
   CSV file saved to reports/Time_range_06:00-10:00H_tracks_2025-01-26_19:14:41.csv
   ```
+  - Spotify playlist
+    Here is a [Spotify Playlist](https://open.spotify.com/playlist/6lUOYHk2oISj9P2bgZwzmA?si=xFFGfl_ETuuo1rPYnoRCTQ) link for a Sunday Morning (6-10AM) Hits Radio playlist created on January 26, 2025. 
 ## How It Works 
 1. **Scraping**:
 - The script scrapes the Hits Radio playlist page to fetch the latest tracks and their metadata (title, artist, and time played).
