@@ -33,13 +33,13 @@
   ```
   get_recent_tracks(track_list, hours=1)
   ```
-  - Time range: Range of time in 24 hours to scrape from
+  - Time range: Range of time in 24 hours to scrape from(default: 6-10AM)
   ```bash
-  start_time_x = '06:00'
+  start_time_x = '06:00' 
   end_time_y = '10:00'
   get_tracks_in_range(track_list, start_time_x,end_time_y)
   ```
-  - Output: Output file for the scraped tracks with timestamp.
+3. Output: Output file for the scraped tracks with timestamp.
   ```bash
   CSV file saved to reports/Recent_3H_tracks_2025-01-26_16:41:52.csv
   CSV file saved to reports/Time_range_06:00-10:00H_tracks_2025-01-26_19:14:41.csv
