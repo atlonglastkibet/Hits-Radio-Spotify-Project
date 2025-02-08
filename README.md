@@ -9,6 +9,7 @@
 - **Playlist Creation**: Create a Spotify playlist with the matched tracks.
 - **Customizable**: Specify the number of hours to scrape and the output format (CSV or Spotify playlist).
 - **Exploratory Data Analysis (EDA)**: I provide csv outputs to provide insights into trending hits.
+- **Streamlit**: I've added a streamlit Web GUI to allow for easier interaction by users.
 
 ## Installation 
 1. **Clone the repository**:
@@ -27,6 +28,12 @@
      SPOTIFY_CLIENT_SECRET=your_client_secret
 
 ## Usage 
+Option 1:
+Run and interact with Streamlit web GUI
+```
+streamlit run main.py
+```
+Option 2:
 1. Run the Notebook cells
 2. Options
   - Hours: Recent number of hours to scrape tracks from (default: 1).
@@ -99,7 +106,7 @@ This ensures consistent formatting and improves matching accuracy.
 
 ### Recommendations
 - Fine tuning the search algorithm to improve accuracy.
-- Bundling the application into a web application so it can run autonomously, along with a GUI for user interaction.
+- Bundling the application into a web application so it can run autonomously, along with a GUI for user interaction.(Update: I've added Streamlit that could run on the web)
 - Adding osuport for more radio stations,allowing users to chose from their favourite raadio station.
 - Error handling and action logging for easy debugging and troubleshooting.
 
