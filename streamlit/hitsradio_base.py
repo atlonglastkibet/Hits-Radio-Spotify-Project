@@ -11,12 +11,12 @@ from dotenv import load_dotenv
 load_dotenv()
 # Page config
 st.set_page_config(
-    page_title="Hits Radio Tracks Scraper",
+    page_title="Hits Radio - Spotify",
     page_icon=":musical_note:",
     layout="wide"
 )
 # Title and description
-st.title(":radio: Hits Radio Tracks Scraper")
+st.title(":radio: Hits Radio - Spotify")
 st.markdown("Scrape and analyze songs played on Hits Radio Kenya, with Spotify playlist generation.")
 # Sidebar for configuration
 with st.sidebar:
