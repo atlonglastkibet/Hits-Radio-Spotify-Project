@@ -1,12 +1,13 @@
 # Hits Radio to Spotify Playlist Automation
-- This project scrapes the latest tracks from [Hits Radio](https://onlineradiobox.com/ke/hitskenya/playlist/?cs=ke.xfmkenya), matches them on **Spotify**, using **Spotify API** and creates a playlist automatically! 
+- This project scrapes the latest tracks from [Hits Radio](https://onlineradiobox.com/ke/hitskenya/playlist/?cs=ke.xfmkenya), matches them on **Spotify**, using **Spotify API** and creates a playlist! 
 - This project allows you to convert your favorite music station playlist into a Spotify playlist, so you never miss out.
 - Here is a [Spotify Playlist](https://open.spotify.com/playlist/6lUOYHk2oISj9P2bgZwzmA?si=xFFGfl_ETuuo1rPYnoRCTQ) link for a Sunday Morning (6-10AM) Hits Radio playlist created on January 26, 2025.
   
 ## Features 
 - **Scrape Tracks**: Fetch the latest tracks played on **Hits Radio** in real time.
 - **Spotify Matching**: Automatically match scraped tracks on Spotify using the Spotify API.
-- **Playlist Creation**: Create a Spotify playlist with the matched tracks.
+- **Playlist Creation**: Create a Spotify playlist with the matched tracks from a time range or from our default filters: Top 50, Morning Hits or Evening hits depending on your mood.
+- **Discover**: Discover new curated playlists from Hits Radio data, updated weekly.
 - **Customizable**: Specify the number of hours to scrape and the output format (CSV or Spotify playlist).
 - **Exploratory Data Analysis (EDA)**: I provide csv outputs to provide insights into trending hits.
 - **Streamlit**: I've added a streamlit Web GUI to allow for easier interaction by users.
@@ -31,7 +32,8 @@
 Option 1:
 Run and interact with Streamlit web GUI
 ```
-streamlit run main.py
+cd streamlit
+streamlit run hitsradio.py
 ```
 Option 2:
 1. Run the Notebook cells
@@ -105,22 +107,11 @@ This ensures consistent formatting and improves matching accuracy.
 - Combining **Spotify's Search API** and **fuzzy string matching** improves accuracy in matching tracks, even when the scraped data isn't perfect.
 
 ### Recommendations
+- Adding a database to manage users, and user data.
+- Add a spotify aunthetication method for easier access.
 - Fine tuning the search algorithm to improve accuracy.
 - Bundling the application into a web application so it can run autonomously, along with a GUI for user interaction.(Update: I've added Streamlit that could run on the web)
-- Adding osuport for more radio stations,allowing users to chose from their favourite raadio station.
+- Adding support for more radio stations,allowing users to chose from their favourite raadio station.
 - Error handling and action logging for easy debugging and troubleshooting.
 
 ## I welcome contributions and feedback!
-
-
-
-
-
-
-
-
-
-
-
-
-
