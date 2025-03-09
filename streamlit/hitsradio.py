@@ -227,15 +227,17 @@ st.markdown("""
 
     /* Static Gradients */
     .gradient-top50 {
-        background: linear-gradient(135deg, #1DB954, #0D7377);  
+        background: linear-gradient(135deg, #1A924A, #0C6257);  
     }
 
     .gradient-morning {
-        background: linear-gradient(135deg, #FFA500, #FF4500);
+        # background: linear-gradient(135deg, #D97873, #CC9A06); 
+        # background: linear-gradient(135deg, #B35752, #A37A05);
+        background: linear-gradient(135deg, #933E3A, #805E04);
     }
 
     .gradient-evening {
-        background: linear-gradient(135deg, #640D6B, #240046);
+        background: linear-gradient(135deg, #512DA8, #303F9F);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -243,21 +245,21 @@ st.markdown("""
 # Playlist data with descriptions and gradient classes
 recent_playlists = [
     {
-        "name": "Hits Radio Top 50",
+        "name": "TOP 50 WKLY",
         "description": "The hottest tracks right now",
-        "link": "https://open.spotify.com/playlist/2j6l3kOdqFCl5fyXYTxFnX?si=U2Ors7VcSD6M33SmLIQY2A",
+        "link": "https://open.spotify.com/playlist/7LSQpp4S4ra24LP3DnuRCF?si=OgmXu0R1T8-jI-0QLaQROA",
         "gradient_class": "gradient-top50"
     },
     {
-        "name": "Hits Radio Morning",
-        "description": "Start your day with these tunes",
-        "link": "https://open.spotify.com/playlist/0WP47PDbhYNS722e5ClNzs?si=Z20Q-geHS-a7hQa9GwVmNA",
+        "name": "6AM IN WAIYAKI WAY",
+        "description": "Watch matatus create lane 8 of 4",
+        "link": "https://open.spotify.com/playlist/0WP47PDbhYNS722e5ClNzs?si=xG2OMEvpS4GErsOFmCjeZQ",
         "gradient_class": "gradient-morning"
     },
     {
-        "name": "Hits Radio Evening",
+        "name": "NAIROBI NIGHTS",
         "description": "Relax and unwind after sunset",
-        "link": "https://open.spotify.com/playlist/example4",
+        "link": "https://open.spotify.com/playlist/3ak0VoL6g3cIOisGgUQczW?si=bln3amu2Rv-QdZbnA5QCww",
         "gradient_class": "gradient-evening"
     }
 ]
@@ -283,7 +285,7 @@ for i, playlist in enumerate(recent_playlists):
             <div class="spotify-logo">{spotify_svg}</div>
             <div>
                 <div class="playlist-name">{playlist['name']}</div>
-                <div class="playlist-description">{playlist['description']}</div>
+                <div class="playlist-description"><strong>{playlist['description']}<strong></div>
             </div>
         </a>
         """
