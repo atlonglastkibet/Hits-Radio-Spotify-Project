@@ -2,6 +2,7 @@
 - This project scrapes the latest tracks from [Hits Radio](https://onlineradiobox.com/ke/hitskenya/playlist/?cs=ke.xfmkenya), matches them on **Spotify**, using **Spotify API** and creates a playlist! 
 - This project allows you to convert your favorite music station playlist into a Spotify playlist, so you never miss out.
 - Here is a [Spotify Playlist](https://open.spotify.com/playlist/6lUOYHk2oISj9P2bgZwzmA?si=xFFGfl_ETuuo1rPYnoRCTQ) link for a Sunday Morning (6-10AM) Hits Radio playlist created on January 26, 2025.
+- The app has been deployed to [Streamlit](https://atlonglastkibet-hits-radio-spotify-project-hitsradio-3tlezi.streamlit.app/).
   
 ## Features 
 - **Scrape Tracks**: Fetch the latest tracks played on **Hits Radio** in real time.
